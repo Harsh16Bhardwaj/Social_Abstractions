@@ -70,13 +70,18 @@ If the Groq component is replaced with an OpenAI model component, we can expect:
 3. Use the chat interface to input your query.
 4. Get easy-to-understand analytics from the flow output.
 
-## SCREENSHOT(https://github.com/user-attachments/assets/a3b68357-3262-4e12-8ecc-0043af636369)
+## SCREENSHOT
 OTS
 
 ![1](ASSETS/CHAT_SCREENSHOTS/1.png)
 ![2](ASSETS/CHAT_SCREENSHOTS/2.png)
 ![3](ASSETS/CHAT_SCREENSHOTS/3.png)
 ![4](ASSETS/CHAT_SCREENSHOTS/4.png) 
+![IMG_20250107_151959](https://github.com/user-attachments/assets/d5898b2d-a6b8-4bf9-b72b-69455a952012)
+![IMG_20250107_151449](https://github.com/user-attachments/assets/ac1eb312-c84a-4841-82e5-6b42513215b7)
+![IMG_20250107_151829](https://github.com/user-attachments/assets/de26a134-6ce6-4ebd-9833-b9f3f62e7cd7)
+![IMG_20250107_151805](https://github.com/user-attachments/assets/c6d83b3a-55c1-496f-83cc-4704ae9870f8)
+
 
 ## Integrating with Website:
 My tam-mate @dikjain has created a user-friendly website usig React to connect to this flow for easier usage. The website will:
