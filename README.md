@@ -53,6 +53,25 @@ When replacing **[Groq Component]** with OpenAI models, you will experience:
 - **[Database Service Name]:** Make sure you have an account with **[Database Service Name]** (e.g., Astra DB, MongoDB) to store and retrieve data.
 - **[Optional API Integration]:** If you're replacing Groq with OpenAI, ensure your OpenAI API key is configured in the project.
 
+
+---
+
+## Screenshots
+
+![IMG_20250107_151249](https://github.com/user-attachments/assets/4d5a7564-9d06-4f89-8c7a-a6a8fcd59713)
+
+
+![IMG_20250107_151959](https://github.com/user-attachments/assets/146fb4e0-dfb0-4f26-b5e6-b99b870b7e0a)
+
+
+![IMG_20250107_151449](https://github.com/user-attachments/assets/d8ec3d9b-3779-4472-bf1b-01d73a54838d)
+
+
+![IMG_20250107_151829](https://github.com/user-attachments/assets/30160f12-40e9-41a0-9f86-a3b8f9de174a)
+
+
+![IMG_20250107_151805](https://github.com/user-attachments/assets/00c5e43f-44d0-4006-90ab-50ef070aa333)
+
 ---
 
 ## Installation
@@ -81,26 +100,6 @@ When replacing **[Groq Component]** with OpenAI models, you will experience:
 3. View the insightful responses generated from your data.
 
 ---
-
-## Screenshots
-
-![IMG_20250107_151249](https://github.com/user-attachments/assets/4d5a7564-9d06-4f89-8c7a-a6a8fcd59713)
-
-
-![IMG_20250107_151959](https://github.com/user-attachments/assets/146fb4e0-dfb0-4f26-b5e6-b99b870b7e0a)
-
-
-![IMG_20250107_151449](https://github.com/user-attachments/assets/d8ec3d9b-3779-4472-bf1b-01d73a54838d)
-
-
-![IMG_20250107_151829](https://github.com/user-attachments/assets/30160f12-40e9-41a0-9f86-a3b8f9de174a)
-
-
-![IMG_20250107_151805](https://github.com/user-attachments/assets/00c5e43f-44d0-4006-90ab-50ef070aa333)
-
-
-
-
 
 ## Integrating with the Website
 
