@@ -74,6 +74,13 @@ When replacing **[Groq Component]** with OpenAI models, you will experience:
 
 ---
 
+## Demo
+
+You can see the full demo of **Social_Abstractions** in action here:  
+**[[Video Demo Link](https://youtu.be/iDCS2sxDWIE?si=oZ-sOXt7hiqV4Jek)]**
+
+---
+
 ## Installation
 
 1. Clone the repository:
@@ -109,12 +116,6 @@ A React-based front-end has been created to connect directly to this flow for ea
 - Simple query interface for real-time data insights.
 - API calls to the core workflow, displaying responses instantly.
 
----
-
-## Demo
-
-You can see the full demo of **Social_Abstractions** in action here:  
-**[[Video Demo Link](https://youtu.be/iDCS2sxDWIE?si=oZ-sOXt7hiqV4Jek)]**
 
 ---
 
