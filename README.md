@@ -70,7 +70,9 @@ If the Groq component is replaced with an OpenAI model component, we can expect:
 3. Use the chat interface to input your query.
 4. Get easy-to-understand analytics from the flow output.
 
-## SCREENSHOTS
+## SCREENSH![IMG_20250107_151959](https://github.com/user-attachments/assets/a3b68357-3262-4e12-8ecc-0043af636369)
+OTS
+
 ![1](ASSETS/CHAT_SCREENSHOTS/1.png)
 ![2](ASSETS/CHAT_SCREENSHOTS/2.png)
 ![3](ASSETS/CHAT_SCREENSHOTS/3.png)
