@@ -1,116 +1,139 @@
-# SocialPulse
+# Social_Abstractions
 
-Important Note: We were required to use GPT models for this project. However, since we did not have access to the OpenAI API, we used the Groq API as a substitute. The flow can easily be modified to use OpenAI models instead of Groq wherever applicable, by simply replacing the Groq component with an OpenAI model component. This change may enhance the quality of responses, as GPT models tend to provide more nuanced and contextual answers.
-
-## Overview
-SocialPulse is an analytics tool that leverages Langflow and Astra DB to provide easy-to-understand analysis of datasets. The flow, named SocialPulse_flow, uses the Groq API (or OpenAI models, with slight modifications) to process and interpret data, providing users with meaningful insights.
-
-The `SocialPulse_flow` is built using the following components and logic:
-
-1. **Load File**
-   - Uploads a dataset (e.g., `data.csv`).
-2. **Split Text into Chunks**
-   - Splits the inputted file into manageable chunks for processing.
-3. **Chat Query**
-   - Takes chat input from the user as a query.
-4. **Astra DB Component**
-   - Stores the text chunks in an Astra DB database.
-   - Uses Astra Vectorize (NVIDIA as the provider) for searching and retrieves relevant results.
-5. **Parse Data Component**
-   - Parses the search results for easier processing.
-6. **Custom Prompt Component**
-   - Uses the following prompt:
-     ```
-     You are an AI assistant. The user has asked the following question based on the provided data: 
-     {UserQuestion}  
-     Based on the provided engagement data, including post types and other relevant parameters, here are the insights: 
-     {Results}
-
-     Your goal is to provide a clear, helpful, and concise response to the user. Avoid showing calculations or overly detailed explanations. Focus on summarizing the results in a way that is easy for a non-technical user to understand.
-
-     Please note that the response is based solely on the dataset provided. If additional or unrelated information is requested, kindly state that it is unavailable. The answer will focus only on the dataset and provide insights about how a specific post is expected to perform, in a concise and easy-to-understand manner. Avoid over-analysis or irrelevant details.
-     ```
-7. **Groq Component(or OpenAI Model)**
-   - Acts as the system message for the custom prompt.
-   - Processes user chat input and provides the final output.
-
-## Database Details
-- **Database Name:** `test`
-- **Collection Name:** `test_collection`
-- **Keyspace:** `default_keyspace`
-
-## Project Flow Diagram
-Below is a step-by-step explanation of how the flow works:
-
-1. **Upload File**: The user uploads a dataset (e.g., `data.csv`).
-2. **Split Text**: The file is split into smaller chunks for processing.
-3. **User Query**: The user inputs a chat query.
-4. **Astra DB Search**: The chunks and the chat query are processed using Astra DB's vectorization (NVIDIA as the provider), and relevant search results are retrieved.
-5. **Parse Results**: The retrieved results are parsed for better readability.
-6. **Custom Prompt**: The parsed results and user query are passed through a custom prompt to generate a concise, non-technical response.
-7. **Groq API(or OpenAI Model)**: The Groq component takes the system message and chat input to produce the final output.
-
-
-## Expected Output Changes if Using OpenAI Instead of Groq
-If the Groq component is replaced with an OpenAI model component, we can expect:
-
-- Improved Context Understanding: OpenAI models, such as GPT-4, are more advanced and capable of interpreting nuanced queries, resulting in more accurate and comprehensive responses.
-- Better Language Quality: The responses will likely be more refined and user-friendly, with better phrasing and tone adjustments.
-- Enhanced Query Handling: OpenAI models may handle ambiguous or complex user queries more effectively than the Groq component.
-
-![FLOW](ASSETS/FLOW/flow.png)
-
-## Usage
-1. Clone the repository and navigate to the project directory:
-   ```bash
-   git clone https://github.com/itsaryanchauhan/SocialPulse
-   cd SocialPulse
-   ```
-2. Upload your dataset (`data.csv`) via the flow.
-3. Use the chat interface to input your query.
-4. Get easy-to-understand analytics from the flow output.
-
-## SCREENSHOT
-OTS
-
-
-![IMG_20250107_151959](https://github.com/user-attachments/assets/d5898b2d-a6b8-4bf9-b72b-69455a952012)
-
-![IMG_20250107_151449](https://github.com/user-attachments/assets/ac1eb312-c84a-4841-82e5-6b42513215b7)
-
-![IMG_20250107_151829](https://github.com/user-attachments/assets/de26a134-6ce6-4ebd-9833-b9f3f62e7cd7)
-
-![IMG_20250107_151805](https://github.com/user-attachments/assets/c6d83b3a-55c1-496f-83cc-4704ae9870f8)
-
-
-## Integrating with Website:
-My tam-mate @dikjain has created a user-friendly website usig React to connect to this flow for easier usage. The website will:
-
-1. Take user input through a simple chat interface.
-2. Hit the API endpoint of the **SocialPulse_flow**.
-3. Display the chat output from the flow directly on the website.
-
-## Demo:
-[![VIDEO DEMO](https://img.youtube.com/vi/35x57256OoM/0.jpg)](https://www.youtube.com/watch?v=35x57256OoM)
-
-## Langflow Setup:
-To use this flow with Langflow, follow these steps:
-
-1. Upload the JSON configuration for SocialPulse_flow in Langflow.
-2. Ensure you have the corresponding Groq API key(or OpenAI API key if switched) integrated within the flow for smooth execution.
-3. Add the input data (such as your dataset) as required by the flow.
-
-## Prerequisites
-- Langflow web application
-- Astra DB account
-- NVIDIA vectorization enabled in Astra DB
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+**Important Note:** This project is designed to leverage advanced models for efficient data processing and analytics. Although GPT models are recommended for higher quality results, the flow is adaptable to other APIs, like **[Alternative API Name]**, by replacing the core model component. This can provide improved contextual understanding and nuanced responses.
 
 ---
 
-Feel free to reach out for any questions or suggestions!
+## Overview
+
+**Social_Abstractions** is a sophisticated tool designed to provide intelligent abstractions and insights from social data, using cutting-edge technologies like **[LangFlow, custom APIs, databases]**. The system simplifies the process of extracting meaningful insights from large datasets through a streamlined, user-friendly interface.
+
+The core workflow, `Social_Abstractions_Flow`, processes user input and returns actionable insights using a variety of AI-driven components. 
+
+---
+
+## Key Components
+
+1. **File Upload:** Allows users to upload datasets, such as CSV or JSON files, for analysis.
+2. **Data Preprocessing:** Splits and processes the input file into smaller, manageable chunks for efficient processing.
+3. **User Query Interface:** Accepts natural language queries from users for easy interaction.
+4. **Database Storage:** 
+   - Utilizes **[Database Name, e.g., MongoDB, Astra DB]** for storing data.
+   - Uses advanced features like **[NVIDIA vectorization, Hugging Face]** for searching and retrieving relevant results from the dataset.
+5. **Query Processing:** A custom-built prompt generator processes search results and user input to provide relevant, easy-to-understand answers.
+6. **AI Model Component:** 
+   - Uses **[Groq/OpenAI Model]** (GPT, GPT-4, etc.) for generating responses to user queries based on the processed data.
+
+---
+
+## How It Works
+
+1. **Upload Data:** Users upload their dataset (e.g., `data.csv` or `data.json`).
+2. **Data Splitting & Processing:** The data is split into smaller, processable chunks.
+3. **Input User Query:** Users can ask questions about the data through an interactive query interface.
+4. **Database Search:** The system processes the query and data chunks using **[vectorization, e.g., NVIDIA, custom search algorithms]** and retrieves the relevant results.
+5. **Results Parsing:** The search results are parsed for better readability and usability.
+6. **Query Response:** The system generates a concise, helpful response to the user's query.
+
+---
+
+## Benefits of Using OpenAI Models
+
+When replacing **[Groq Component]** with OpenAI models, you will experience:
+
+- **Better Contextual Understanding:** OpenAI models like GPT-4 are adept at understanding and responding to complex, nuanced queries.
+- **Improved Language Quality:** OpenAI models often produce more refined, grammatically correct, and user-friendly responses.
+- **Enhanced Query Handling:** OpenAI models handle ambiguous or unclear queries more effectively than other APIs.
+
+---
+
+## Prerequisites
+
+- **LangFlow Web Application:** Used for creating and managing workflows.
+- **[Database Service Name]:** Make sure you have an account with **[Database Service Name]** (e.g., Astra DB, MongoDB) to store and retrieve data.
+- **[Optional API Integration]:** If you're replacing Groq with OpenAI, ensure your OpenAI API key is configured in the project.
+
+---
+
+## Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Harsh16Bhardwaj/Social_Abstractions.git
+    cd Social_Abstractions
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Set up your **API key** for **[Groq/OpenAI]** (if applicable) in the environment variables.
+
+4. Upload your dataset (e.g., `data.csv`) and input your query through the interface.
+
+---
+
+## Usage
+
+1. Upload your dataset to the system.
+2. Ask a question using the query interface.
+3. View the insightful responses generated from your data.
+
+---
+
+## Screenshots
+
+![IMG_20250107_151249](https://github.com/user-attachments/assets/4d5a7564-9d06-4f89-8c7a-a6a8fcd59713)
+
+
+![IMG_20250107_151959](https://github.com/user-attachments/assets/146fb4e0-dfb0-4f26-b5e6-b99b870b7e0a)
+
+
+![IMG_20250107_151449](https://github.com/user-attachments/assets/d8ec3d9b-3779-4472-bf1b-01d73a54838d)
+
+
+![IMG_20250107_151829](https://github.com/user-attachments/assets/30160f12-40e9-41a0-9f86-a3b8f9de174a)
+
+
+![IMG_20250107_151805](https://github.com/user-attachments/assets/00c5e43f-44d0-4006-90ab-50ef070aa333)
+
+
+
+
+
+## Integrating with the Website
+
+A React-based front-end has been created to connect directly to this flow for easier usage. The website allows:
+
+- User-friendly interface for uploading datasets.
+- Simple query interface for real-time data insights.
+- API calls to the core workflow, displaying responses instantly.
+
+---
+
+## Demo
+
+You can see the full demo of **Social_Abstractions** in action here:  
+**[Video Demo Link]**
+
+---
+
+## Langflow Setup
+
+To use this flow with **Langflow**, follow these steps:
+
+1. Upload the JSON configuration for **`Social_Abstractions_Flow`** in Langflow.
+2. Ensure your API key for **[Groq/OpenAI]** is integrated for smooth execution.
+3. Input your dataset and start querying!
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the LICENSE file for more details.
+
+
 
 
 
