@@ -114,7 +114,7 @@ A React-based front-end has been created to connect directly to this flow for ea
 ## Demo
 
 You can see the full demo of **Social_Abstractions** in action here:  
-**[Video Demo Link]**
+**[[Video Demo Link](https://youtu.be/iDCS2sxDWIE?si=oZ-sOXt7hiqV4Jek)]**
 
 ---
 
