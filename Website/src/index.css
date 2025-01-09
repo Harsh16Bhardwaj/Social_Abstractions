@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.font-script {
+  font-family: 'Style Script', cursive;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-merriweather {
+  font-family: 'Merriweather', cursive;
+}

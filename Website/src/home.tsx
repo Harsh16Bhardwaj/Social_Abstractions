@@ -22,7 +22,7 @@ import {
   Zap
 } from 'lucide-react';
 
-function HomePage() {
+function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   return (
@@ -57,7 +57,7 @@ function HomePage() {
         className="fixed w-full top-0 z-50 bg-white/10 backdrop-blur-lg border-b border-white/10"
       >
         <div className="container mx-auto px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
               <motion.div
                 animate={{
@@ -69,9 +69,9 @@ function HomePage() {
                   ease: "easeInOut"
                 }}
               >
-                <Leaf className="w-8 h-8 text-green-300" />
+                <Sparkles className="w-8 h-8 text-yellow-300" />
               </motion.div>
-              <span className="font-script text-3xl text-white">InsightAI</span>
+              <span className="font-script text-3xl text-white">Abstractions</span>
             </div>
             <nav className="flex space-x-12">
               {[
@@ -99,31 +99,29 @@ function HomePage() {
       <div className="container mx-auto px-8 pt-40 pb-32">
         {/* Hero Section */}
         <div className="relative mb-32">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl flex-row align-center">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
               className="inline-block p-6 bg-white/10 backdrop-blur-lg rounded-full mb-8"
             >
-              <MessageSquare className="w-14 h-14 text-purple-300" />
+              <MessageSquare className="w-8 h-8 text-purple-300" />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-script text-8xl md:text-9xl font-bold text-white mb-8 leading-tight"
+              className="font-script text-5xl md:text-8xl font-bold text-white mb-2 leading-tight"
             >
-              Chat Insights AI
+              Social_Abstractions
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl text-purple-200 mb-12 max-w-2xl leading-relaxed"
-            >
-              Transform your conversations into actionable insights with our advanced AI-powered analytics platform
-            </motion.p>
+              className="font-merriweather  font-normal text-xl text-purple-200 mb-12 max-w-2xl leading-relaxed"
+            > Level Up Your Social Media Game with one click !            </motion.p>
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -168,13 +166,9 @@ function HomePage() {
           <div className="relative">
             <h2 className="text-4xl font-script text-white mb-8">See it in Action</h2>
             <div className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-2xl">
-              <iframe
-                className="w-full h-[600px]"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Product Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+            
+              <iframe                 className="w-full h-[600px]"
+ src="https://www.youtube.com/embed/iDCS2sxDWIE" title="Social_Abstractions" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
           </div>
         </motion.div>
@@ -305,4 +299,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default App;
