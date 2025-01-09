@@ -22,7 +22,7 @@ import {
   Zap
 } from 'lucide-react';
 
-function App() {
+function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
 
   return (
@@ -305,4 +305,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
