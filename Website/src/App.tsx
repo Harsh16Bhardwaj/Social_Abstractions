@@ -6,7 +6,6 @@ import { ChatHeader } from "./components/ChatHeader";
 import { useChat } from "./hooks/useChat";
 import { Component } from "lucide-react";
 import "./styles/glassmorphism.css";
-
 function App() {
   const {
     sessions,
