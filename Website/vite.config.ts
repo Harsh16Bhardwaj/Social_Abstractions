@@ -16,4 +16,5 @@ export default defineConfig({
       },
     },
   },
+  base: '/Social_Abstractions/', // Add this line for GitHub Pages deployment
 });
