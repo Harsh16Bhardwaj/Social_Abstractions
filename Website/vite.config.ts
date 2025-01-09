@@ -16,5 +16,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/Social_Abstractions/Website/',  // Adjust this according to the folder structure
+  base: '/Social_Abstractions/',  // Adjust this according to the folder structure
 });
