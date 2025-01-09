@@ -16,5 +16,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/Social_Abstractions/', // Add this line for GitHub Pages deployment
+  base: '/Social_Abstractions/Website/',  // Adjust this according to the folder structure
 });
